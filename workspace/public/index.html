@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Hello React!</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+  class Forms extends React.Component {
+    render(){
+      return(
+      <div>
+        <h3>文件上传：</h3>
+          选择一个文件上传: <br />
+          <form action="/file_upload" method="post" encType="multipart/form-data">
+          <input type="file" name="file" size="50" />
+          <br /><br />
+          <input type="submit" value="上传文件" />
+          </form>
+      </div>
+      );
+    }
+  }
+
+  ReactDOM.render(
+    <Forms />,
+    document.getElementById('example')
+  );
+</script>
+</body>
+</html>
